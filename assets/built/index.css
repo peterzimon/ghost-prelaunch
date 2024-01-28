@@ -665,7 +665,6 @@ h5 {
 
 .gh-head-menu .nav a {
   display: inline-block;
-  padding-top: 0.4rem;
   text-decoration-line: none;
 }
 
@@ -1345,10 +1344,6 @@ figcaption strong {
   background-color: var(--color-primary);
 }
 
-.bg-inherit {
-  background-color: inherit;
-}
-
 .bg-transparent {
   background-color: transparent;
 }
@@ -1461,6 +1456,10 @@ figcaption strong {
   font-size: 1.6rem !important;
 }
 
+.\!text-lg {
+  font-size: 2.2rem !important;
+}
+
 .text-2xl {
   font-size: 3.44rem;
 }
@@ -1503,10 +1502,6 @@ figcaption strong {
 
 .text-xs {
   font-size: 1.0rem;
-}
-
-.\!text-lg {
-  font-size: 2.2rem !important;
 }
 
 .font-\[320\] {
@@ -1782,10 +1777,6 @@ figcaption strong {
   z-index: 900;
 }
 
-.group.is-menu-open .group-\[\.is-menu-open\]\:z-0 {
-  z-index: 0;
-}
-
 .group.is-menu-open .group-\[\.is-menu-open\]\:flex {
   display: flex;
 }
@@ -1800,10 +1791,6 @@ figcaption strong {
 
 .group.is-menu-open .group-\[\.is-menu-open\]\:overflow-y-scroll {
   overflow-y: scroll;
-}
-
-.group.is-menu-open .group-\[\.is-menu-open\]\:bg-inherit {
-  background-color: inherit;
 }
 
 .group.is-menu-open .group-\[\.is-menu-open\]\:text-xl {
@@ -1931,10 +1918,6 @@ figcaption strong {
     justify-content: flex-end;
   }
 
-  .sm\:self-center {
-    align-self: center;
-  }
-
   .sm\:overflow-auto {
     overflow: auto;
   }
@@ -1955,10 +1938,6 @@ figcaption strong {
 
   .sm\:text-left {
     text-align: left;
-  }
-
-  .sm\:\!text-lg {
-    font-size: 2.2rem !important;
   }
 
   .sm\:text-3xl {

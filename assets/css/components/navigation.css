@@ -9,7 +9,7 @@
 }
 
 .gh-head-menu .nav a {
-    @apply inline-block pt-1 no-underline;
+    @apply inline-block no-underline;
 }
 
 .gh-head-menu .nav-current a {
