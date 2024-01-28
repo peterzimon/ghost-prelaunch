@@ -1163,6 +1163,14 @@ figcaption strong {
   max-height: 4rem;
 }
 
+.max-h-6 {
+  max-height: 2.4rem;
+}
+
+.max-h-8 {
+  max-height: 3.2rem;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
@@ -1205,6 +1213,14 @@ figcaption strong {
 
 .max-w-\[720px\] {
   max-width: 720px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
+.max-w-\[240px\] {
+  max-width: 240px;
 }
 
 .flex-grow {
