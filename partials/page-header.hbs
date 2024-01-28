@@ -1,16 +1,18 @@
-<header class="gh-header gh-canvas grid grid-cols-canvas pb-[4vmin]">
-    <h1 class="gh-title text-2xl sm:text-3xl md:text-4xl text-center">{{title}}</h1>
+<header class="gh-header gh-canvas grid grid-cols-canvas pb-[6vmin]">
+    <h1 class="gh-title text-2xl sm:text-3xl md:text-5xl md:tracking-tighter text-center !col-[wide-start/wide-end]">{{title}}</h1>
 
     {{#if custom_excerpt}}
-        <p class="gh-excerpt !text-base md:!text-lg mt-[3vmin] text-center tracking-tight border-b pb-[3vmin] md:!leading-tight">{{custom_excerpt}}</p>
+        <p class="gh-excerpt !text-lg md:!text-xl mt-[3vmin] text-center tracking-tight font-[320] md:!leading-tight {{^if feature_image}}border-b pb-[6vmin]{{/if}} md:!leading-tight">{{custom_excerpt}}</p>
     {{/if}}
 
     {{#if feature_image}}
-        <figure class="gh-feature-image !col-[wide-start/wide-end] w-full mt-[8vmin]">
-            <img class="w-full" src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-            {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
-            {{/if}}
-        </figure>
+        <div class="gh-canvas grid grid-cols-canvas !col-[full-start/full-end] bg-[var(--color-primary)] mt-[8vmin]">
+            <figure class="gh-feature-image !col-[wide-start/wide-end] w-full">
+                <img class="w-full" src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+            </figure>
+        </div>
+        {{#if feature_image_caption}}
+            <figcaption class="text-center">{{feature_image_caption}}</figcaption>
+        {{/if}}
     {{/if}}
 </header>

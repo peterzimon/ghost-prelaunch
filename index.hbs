@@ -16,13 +16,13 @@
                     <img class="w-full max-w-22 justify-self-center mb-[3vmin]" src="{{@site.icon}}" />
                 {{/if}}
 
-                <h1 class="gh-title text-2xl sm:text-3xl md:text-4xl text-center">{{@site.title}}</h1>
+                <h1 class="gh-title text-2xl sm:text-3xl md:text-5xl text-center">{{@site.title}}</h1>
 
                 {{#if @site.description}}
-                    <p class="gh-excerpt !text-base mt-[7vmin] md:!text-lg sm:mt-[4vmin] text-center tracking-tight md:!leading-tight">{{@site.description}}</p>
+                    <p class="gh-excerpt !text-lg md:!text-xl mt-[3vmin] text-center tracking-tight !leading-tight font-[320]">{{@site.description}}</p>
                 {{/if}}
             </header>
-            <div class="gh-content gh-canvas grid grid-cols-canvas">
+            <div class="gh-content gh-canvas grid grid-cols-canvas -mb-8">
                 <form data-members-form class="flex flex-col gap-2 items-center w-full">
                     <div class="relative flex flex-col gap-2 sm:flex-row items-center w-full max-w-[360px] sm:max-w-[540px] before:absolute before:content-[''] before:border before:inset-0 before:z-90 before:h-12 before:bg-white before:rounded-full">
                         <input data-members-email type="email" required="true" class="text-center text-black bg-transparent w-full text-base flex-grow outline-none font-[350] z-10 flex items-center h-11 sm:text-left sm:h-12 px-4 sm:px-6 mt-0.5 sm:mt-0 rounded-2xl" placeholder="Enter your email for updates">

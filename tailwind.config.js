@@ -68,12 +68,12 @@ export default {
           xs: '1.0rem',
           sm: '1.2rem',
           md: '1.6rem',
-          lg: '2.1rem',
-          xl: '2.84rem',
+          lg: '2.2rem',
+          xl: '2.5rem',
           '2xl': '3.44rem',
           '3xl': '4.6rem',
           '4xl': '6.2rem',
-          '5xl': ['8.97rem', '1.15'],
+          '5xl': ['7.4rem', '1.15'],
           inherit: 'inherit'
         },
         lineHeight: {

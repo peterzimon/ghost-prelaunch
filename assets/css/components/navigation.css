@@ -1,7 +1,7 @@
 /* Primary Navigation
 /* ---------------------------------------------------------- */
 .gh-head-menu .nav {
-    @apply inline-flex flex-wrap items-center list-none gap-8;
+    @apply inline-flex flex-wrap items-center list-none gap-y-4 gap-x-8;
 }
 
 .gh-head-menu .nav li {

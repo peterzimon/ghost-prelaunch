@@ -85,10 +85,20 @@
             }
         },
         "custom": {
+            "site_background_color": {
+                "type": "color",
+                "default": "#ffffff"
+            },
             "navigation": {
                 "type": "boolean",
                 "default": false,
                 "description": "Show logo and primary navigation"
+            },
+            "cover_as_background": {
+                "type": "boolean",
+                "default": false,
+                "description": "Use cover image as site background on homepage",
+                "group": "homepage"
             }
         }
     },

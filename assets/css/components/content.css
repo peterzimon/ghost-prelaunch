@@ -19,6 +19,14 @@
     @apply w-full;
 }
 
+.has-light-text .gh-excerpt {
+    @apply border-[rgba(255,255,255,0.1)];
+}
+
+.has-dark-text .gh-excerpt {
+    @apply border-[rgba(0,0,0,0.1)];
+}
+
 
 /* Typography
 /* ---------------------------------------------------------- */

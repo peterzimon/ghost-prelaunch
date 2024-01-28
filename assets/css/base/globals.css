@@ -20,8 +20,16 @@ body {
     @apply min-h-[100vh] m-0 p-0 font-sans leading-6 bg-white scroll-smooth text-base;
 }
 
+html.has-light-text body {
+    @apply text-white;
+}
+
+html.has-dark-text body {
+    @apply text-black;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    @apply m-0 leading-tight font-bold;
+    @apply m-0 leading-tight font-[640];
 }
 
 h1 {

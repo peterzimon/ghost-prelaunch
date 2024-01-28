@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}" class="flex flex-col min-h-[100vh] bg-white">
+<html lang="{{@site.locale}}" class="flex flex-col min-h-[100vh]">
 <head>
 
     <meta charset="utf-8" />
@@ -10,6 +10,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,300..900&display=swap" >
     <script src="{{asset "built/index.js"}}" defer></script>
 
+    <style>
+        :root {
+            --background-color: {{@custom.site_background_color}}
+        }
+    </style>
+
+    <script>
+        /* The script for calculating the color contrast has been taken from
+        https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
+        var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+        accentColor = accentColor.trim().slice(1);
+        var r = parseInt(accentColor.substr(0, 2), 16);
+        var g = parseInt(accentColor.substr(2, 2), 16);
+        var b = parseInt(accentColor.substr(4, 2), 16);
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        var textColor = (yiq >= 128) ? 'dark' : 'light';
+
+        document.documentElement.className = `has-${textColor}-text`;
+    </script>
+
     <title>{{meta_title}}</title>
 
     {{ghost_head}}
@@ -18,19 +38,14 @@
 </head>
 <body class="{{body_class}} group">
 
-<div class="flex flex-col min-h-[100vh] {{#is "home"}}{{#if @site.cover_image}}bg-center bg-cover relative text-white before:absolute before:inset-0 before:content-[''] before:bg-[rgba(0,0,0,0.3)] z-0{{/if}}{{/is}}"
-{{#is "home"}}
-    {{#if @site.cover_image}}
-        style="background-image: url('{{@site.cover_image}}')"
-    {{/if}}
-{{/is}}
->
+<div class="flex flex-col min-h-[100vh] {{#is "home"}}{{#if @site.cover_image}}{{#if @custom.cover_as_background}}bg-center bg-cover relative text-white before:absolute before:inset-0 before:content-[''] before:bg-[rgba(0,0,0,0.3)] before:z-0{{/if}}{{/if}}{{/is}}"
+        style="{{#is "home"}}{{#if @site.cover_image}}{{#if @custom.cover_as_background}}background-image: url('{{@site.cover_image}}'){{/if}}{{/if}}{{/is}}; background-color: {{@custom.site_background_color}}">
 
 {{#if @custom.navigation}}
     {{> "head"}}
 {{/if}}
 
-<main class="gh-main flex flex-grow flex-col min-h-full z-10">
+<main class="gh-main flex flex-grow flex-col min-h-full z-10 group-[.is-menu-open]:hidden">
 
     {{{body}}}
     {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
