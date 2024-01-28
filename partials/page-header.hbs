@@ -1,8 +1,8 @@
 <header class="gh-header gh-canvas grid grid-cols-canvas pb-[4vmin]">
-    <h1 class="gh-title text-6xl">{{title}}</h1>
+    <h1 class="gh-title text-2xl sm:text-3xl md:text-4xl text-center">{{title}}</h1>
 
     {{#if custom_excerpt}}
-        <p class="gh-excerpt !text-xl mt-[3vmin]">{{custom_excerpt}}</p>
+        <p class="gh-excerpt !text-base md:!text-lg mt-[3vmin] text-center tracking-tight border-b pb-[3vmin] md:!leading-tight">{{custom_excerpt}}</p>
     {{/if}}
 
     {{#if feature_image}}

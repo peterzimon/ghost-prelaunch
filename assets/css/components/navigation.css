@@ -1,11 +1,11 @@
 /* Primary Navigation
 /* ---------------------------------------------------------- */
 .gh-head-menu .nav {
-    @apply inline-flex flex-wrap items-center list-none gap-4;
+    @apply inline-flex flex-wrap items-center list-none gap-8;
 }
 
 .gh-head-menu .nav li {
-    @apply mr-[1.5vmin] p-0;
+    @apply p-0;
 }
 
 .gh-head-menu .nav a {
@@ -44,15 +44,15 @@
 }
 
 .gh-foot-menu .nav {
-    @apply inline-flex flex-wrap items-center list-none justify-center;
+    @apply inline-flex flex-wrap items-center list-none justify-center gap-8;
 }
 
 .gh-foot-menu .nav li {
-    @apply mr-[1.5vmin] p-0;
+    @apply p-0;
 }
 
 .gh-foot-menu .nav a {
-    @apply inline-block pt-1 no-underline shadow-[0_-1px_0_0_currentcolor_inset];
+    @apply inline-block no-underline shadow-[0_-1px_0_0_currentcolor_inset];
 }
 
 @media (max-width: 700px) {

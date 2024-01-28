@@ -3,6 +3,9 @@ export default {
   content: ["./*.hbs", "./**/*.hbs"],
   theme: {
       extend: {
+        fontFamily: {
+          'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+        },
         screens: {
           sm: '640px',
           md: '800px',
@@ -60,21 +63,17 @@ export default {
           96: '38.4rem'
         },
         fontSize: {
-          '2xs': '1.0rem',
-          base: '1.45rem',
-          xs: '1.2rem',
-          sm: '1.35rem',
-          md: '1.45rem',
-          lg: '1.75rem',
-          xl: '2.1rem',
-          '2xl': '2.4rem',
-          '3xl': '3rem',
-          '4xl': '3.6rem',
-          '5xl': ['4.2rem', '1.15'],
-          '6xl': ['5.4rem', '1'],
-          '7xl': ['7.2rem', '1'],
-          '8xl': ['9.6rem', '1'],
-          '9xl': ['12.8rem', '1'],
+          base: '1.6rem',
+          '2xs': '0.85rem',
+          xs: '1.0rem',
+          sm: '1.2rem',
+          md: '1.6rem',
+          lg: '2.1rem',
+          xl: '2.84rem',
+          '2xl': '3.44rem',
+          '3xl': '4.6rem',
+          '4xl': '6.2rem',
+          '5xl': ['8.97rem', '1.15'],
           inherit: 'inherit'
         },
         lineHeight: {

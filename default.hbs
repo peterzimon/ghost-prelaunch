@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,300..900&display=swap" >
     <script src="{{asset "built/index.js"}}" defer></script>
 
     <title>{{meta_title}}</title>
@@ -15,11 +18,17 @@
 </head>
 <body class="{{body_class}} group">
 
-<div class="flex flex-col min-h-[100vh] bg-white">
+<div class="flex flex-col min-h-[100vh] {{#is "home"}}{{#if @site.cover_image}}bg-center bg-cover relative text-white{{/if}}{{/is}}"
+{{#is "home"}}
+    {{#if @site.cover_image}}
+        style="background-image: url('{{@site.cover_image}}')"
+    {{/if}}
+{{/is}}
+>
 
 {{> "head"}}
 
-<main class="gh-main flex flex-grow flex-col">
+<main class="gh-main flex flex-grow flex-col min-h-full">
 
     {{{body}}}
     {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}

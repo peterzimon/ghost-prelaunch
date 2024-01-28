@@ -1,5 +1,6 @@
 :root {
-    /* Colours */
+    --content-width: 720px;
+    --container-width: 1320px;
     --color-primary: var(--ghost-accent-color, #3eb0ef);
 }
 
@@ -24,36 +25,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    @apply text-5xl tracking-tight leading-supertight;
-}
-@media (max-width: 640px) {
-    h1 {
-        @apply text-4xl;
-    }
-}
-
-h2 {
     @apply text-4xl tracking-tight leading-supertight;
 }
 @media (max-width: 640px) {
-    h2 {
+    h1 {
         @apply text-3xl;
     }
 }
 
+h2 {
+    @apply text-3xl tracking-tight leading-supertight;
+}
+@media (max-width: 640px) {
+    h2 {
+        @apply text-2xl;
+    }
+}
+
 h3 {
-    @apply text-3xl tracking-tight leading-tighter;
+    @apply text-2xl tracking-tight leading-tighter;
 }
 @media (max-width: 640px) {
     h3 {
-        @apply text-2xl;
+        @apply text-xl;
     }
 }
 
 h4 {
     @apply text-xl;
 }
+@media (max-width: 640px) {
+    h4 {
+        @apply text-lg;
+    }
+}
 
 h5 {
     @apply text-lg;
+}
+@media (max-width: 640px) {
+    h5 {
+        @apply text-md;
+    }
 }
