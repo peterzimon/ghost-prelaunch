@@ -83,6 +83,13 @@
             "xl": {
                 "width": 2000
             }
+        },
+        "custom": {
+            "navigation": {
+                "type": "boolean",
+                "default": false,
+                "description": "Show logo and primary navigation"
+            }
         }
     },
     "type": "module"

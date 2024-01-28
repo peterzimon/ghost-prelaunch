@@ -1000,6 +1000,14 @@ figcaption strong {
   z-index: 10;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
 .\!col-\[wide-start\/wide-end\] {
   grid-column: wide-start/wide-end !important;
 }
