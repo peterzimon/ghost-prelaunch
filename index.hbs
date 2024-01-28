@@ -1,3 +1,41 @@
 {{!< default}}
 
-index.hbs
+{{#get "pages" filter="slug:home" as |page|}}
+    {{#if page}}
+        {{#foreach page}}
+        <article class="gh-article {{post_class}} py-[8vmin]">
+            {{> "page-header"}}
+            {{> "page-content"}}
+        </article>
+        {{/foreach}}
+    {{else}}
+        <article class="gh-article py-8vmin">
+
+            <header class="gh-header gh-canvas grid grid-cols-canvas pb-[4vmin]">
+                <h1 class="gh-title text-6xl">{{@site.title}}</h1>
+                {{#if @site.description}}
+                    <p class="gh-excerpt !text-xl mt-[3vmin]">{{@site.description}}</p>
+                {{/if}}
+
+                {{#if @site.cover_image}}
+                    <figure class="gh-feature-image !col-[wide-start/wide-end] w-full mt-[8vmin]">
+                        <img class="w-full" src="{{@site.cover_image}}" alt="{{@site.title}}" />
+                    </figure>
+                {{/if}}
+            </header>
+            <div class="gh-content gh-canvas grid grid-cols-canvas">
+                <form data-members-form class="w-full max-w-[650px] flex flex-col gap-2 items-center">
+                    <div class="relative flex flex-col items-center w-full">
+                        <input data-members-email type="email" required="true" class="text-xl flex-grow border outline-none font-[350] z-10 flex items-center h-[62px] px-4 rounded-2xl w-full" placeholder="Enter your email for updates">
+                        <button type="submit" class="bg-[var(--color-primary)] z-10 px-4 hover:opacity-70 transition-all flex items-center justify-center rounded-lg w-full h-[62px] mt-2 text-xl">
+                            <span class="block text-white">Subscribe</span>
+                        </button>
+                    </div>
+                    <p class="loading animate-pulse">Hold on</p>
+                    <p class="error">Something's gone wrong. Please try again.</p>
+                    <p class="success">Cool! Check your inbox.</p>
+                </form>
+            </div>
+        </article>
+    {{/if}}
+{{/get}}

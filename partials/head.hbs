@@ -1,7 +1,6 @@
-<header id="gh-head" class="gh-head p-[4vmin] bg-inherit transition-all overflow-hidden group-[.is-menu-open]:fixed group-[.is-menu-open]:inset-0 group-[.is-menu-open]:z-[900] group-[.is-menu-open]:overflow-y-scroll sm:overflow-auto">
-    <nav class="gh-head-inner grid grid-cols-[1fr] gap-10 grid-flow-row-dense gh-container w-full max-w-[1200px] mx-auto h-full sm:h-auto sm:grid-cols-[1fr_auto_1fr] group-[.is-menu-open]:grid-rows-[auto_1fr_auto]">
-
-        <div class="gh-head-brand relative z-10 col-auto flex sm:grid justify-between select-none sm:select-auto items-center sm:max-w-[200px] text-center break-all sm:col-[2/3]">
+<header id="gh-head" class="gh-head py-[4vmin] bg-inherit transition-all overflow-hidden group-[.is-menu-open]:fixed group-[.is-menu-open]:inset-0 group-[.is-menu-open]:z-[900] group-[.is-menu-open]:overflow-y-scroll sm:overflow-auto">
+    <nav class="gh-head-inner gh-canvas grid grid-cols-canvas gap-y-4 grid-flow-row-dense gh-container w-full max-w-[1200px] mx-auto h-full sm:h-auto sm:grid-cols-canvas group-[.is-menu-open]:grid-rows-[auto_1fr_auto]">
+        <div class="gh-head-brand relative z-10 col-[main-start/main-end] flex sm:grid justify-between select-none sm:select-auto items-center sm:max-w-[200px] text-center break-all sm:col-[main-start/main-end]">
             <a class="gh-head-logo text-inherit no-underline block font-bold leading-tight text-2xl sm:text-xl" href="{{@site.url}}">
                 {{#if @site.logo}}
                     <img class="max-h-10" src="{{@site.logo}}" alt="{{@site.title}}" />
@@ -15,16 +14,13 @@
                 </div>
             </a>
         </div>
-        <div class="gh-head-menu hidden self-center flex-col items-center text-center mb-[10vh] font-light text-3xl leading-tighter sm:flex sm:self-auto sm:flex-row sm:text-left sm:mb-auto sm:text-base sm:leading-normal group-[.is-menu-open]:flex">
+        <div class="gh-head-menu hidden self-center flex-col items-center text-center mb-[10vh] font-light text-3xl leading-tighter sm:flex sm:self-auto sm:flex-row sm:text-left sm:mb-auto sm:text-base sm:leading-normal sm:col-[main-start/main-end] group-[.is-menu-open]:flex">
             {{navigation}}
         </div>
         <div class="gh-head-actions hidden pt-5 sm:pt-0 sm:flex justify-center text-left sm:justify-end items-center list-none sm:text-right group-[.is-menu-open]:flex">
             <div class="gh-head-actions-list inline-flex gap-4 flex-wrap flex-end items-center">
-                {{search}}
                 {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button ml-10 sm:ml-0" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
+                    {{#if @member}}
                     <a class="gh-button ml-10 sm:ml-0" href="#/portal/account">Account</a>
                     {{/if}}
                 {{/if}}

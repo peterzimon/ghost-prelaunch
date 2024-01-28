@@ -1,8 +1,8 @@
 @import "tailwindcss/base";
-:root {
-    /* Colours */
-    --color-primary: var(--ghost-accent-color, #3eb0ef);
-}
+@import "base/globals.css";
 
 @import "tailwindcss/components";
+@import "components/navigation.css";
+@import "components/content.css";
+
 @import "tailwindcss/utilities";
